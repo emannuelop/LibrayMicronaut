@@ -3,7 +3,7 @@
 ## Resumo do projeto
 Este projeto foi concebido como parte integrante da disciplina de Tópicos Especiais em Programação Optativa I, ministrado na Universidade Estadual do Tocantins - UNITINS. O seu propósito central consiste na criação de um sistema de gestão bibliotecária denominado LibraySpring.
 
-O sistema está sendo desenvolvido em java com o framework Micronaut seguindo os princípios da orientação a objetos. O banco de dados utilizado será o PostgreSQL.
+O sistema está sendo desenvolvido em java com o framework Micronaut seguindo os princípios da orientação a objetos. O banco de dados utilizado será o MySQL.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
@@ -59,5 +59,5 @@ Para criar um novo usuário, certifique-se de preencher corretamente os campos n
 
 ## 👨‍💻 Autores
 
-| [<img src="https://github.com/emannuelop/LibraySpring/blob/main/imagens/danilo.png" width=115><br><sub>Danilo Da Silva</sub>](https://github.com/DaniloDaSilvaMoreira) |  [<img src="https://github.com/emannuelop/LibraySpring/blob/main/imagens/emannuel.png" width=115><br><sub>Emannuel Oliveira</sub>](https://github.com/emannuelop) |  [<img src="https://github.com/emannuelop/LibraySpring/blob/main/imagens/erick.jpg" width=115><br><sub>Erick Santos</sub>](https://github.com/ericksantos37) |
+| [<img src="https://github.com/emannuelop/LibrayMicronaut/blob/main/imagens/danilo.png" width=115><br><sub>Danilo Da Silva</sub>](https://github.com/DaniloDaSilvaMoreira) |  [<img src="https://github.com/emannuelop/LibrayMicronaut/blob/main/imagens/emannuel.png" width=115><br><sub>Emannuel Oliveira</sub>](https://github.com/emannuelop) |  [<img src="https://github.com/emannuelop/LibrayMicronaut/blob/main/imagens/erick.jpg" width=115><br><sub>Erick Santos</sub>](https://github.com/ericksantos37) |
 | :---: | :---: | :---: | 
