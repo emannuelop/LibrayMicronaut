@@ -1,8 +1,0 @@
-package com.example.repository;
-
-import io.micronaut.core.annotation.Introspected;
-
-@Repository
-public interface LivroRepository extends JpaRepository<Livro, Long>{
-
-}
