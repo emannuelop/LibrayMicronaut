@@ -1,0 +1,16 @@
+package com.example.DTO;
+
+import io.micronaut.core.annotation.Introspected;
+
+public record LivroDTO(
+
+    @NotBlank(message = "O titulo é obrigatório.")
+    String titulo,
+
+    Long idAutor,
+
+    @NotBlank(message = "O Isbn é obrigatório.")
+    String isbn
+) {
+    
+}

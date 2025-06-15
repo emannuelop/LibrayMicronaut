@@ -1,0 +1,15 @@
+package com.example.DTO;
+
+import io.micronaut.core.annotation.Introspected;
+
+public record UsuarioDTO(
+
+    String login,
+
+    String senha,
+
+    int idCargo
+
+) {
+    
+}

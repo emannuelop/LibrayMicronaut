@@ -1,4 +1,4 @@
-package com.example.Model;
+package com.example.Repository;
 
 import io.micronaut.core.annotation.Introspected;
 

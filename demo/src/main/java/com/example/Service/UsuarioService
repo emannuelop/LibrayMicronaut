@@ -1,4 +1,4 @@
-package com.example.Model;
+package com.example.Service;
 
 import io.micronaut.core.annotation.Introspected;
 import jakarta.persistence.Entity;
