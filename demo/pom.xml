@@ -42,7 +42,6 @@
       <artifactId>micronaut-jackson-databind</artifactId>
       <scope>compile</scope>
     </dependency>
-    
     <dependency>
       <groupId>io.micronaut.data</groupId>
       <artifactId>micronaut-data-jdbc</artifactId>
