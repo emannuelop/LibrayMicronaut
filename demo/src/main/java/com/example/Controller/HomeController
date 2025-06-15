@@ -1,0 +1,12 @@
+package com.example.Controller;
+
+import io.micronaut.core.annotation.Introspected;
+
+@Controller
+public class HomeController {
+
+    @GetMapping("/")
+    public String redirectToSwagger() {
+        return "redirect:/swagger-ui.html";
+    }
+}
