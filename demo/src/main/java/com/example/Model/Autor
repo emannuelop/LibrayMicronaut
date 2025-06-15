@@ -1,0 +1,42 @@
+package com.example.Model;
+
+import io.micronaut.core.annotation.Introspected;
+import jakarta.persistence.Entity;
+
+@Entity
+public class Autor {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long idAutor;
+
+    @NotBlank(message = "O nome é obrigatório.")
+    private String nome;
+
+    @NotBlank(message = "A nacionalidade é obrigatória.")
+    private String nacionalidade;
+
+    public Long getIdAutor() {
+        return idAutor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setIdAutor(Long idAutor) {
+        this.idAutor = idAutor;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+}
