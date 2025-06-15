@@ -1,30 +1,31 @@
 package com.example.model;
 
 import io.micronaut.core.annotation.Introspected;
-import jakarta.persistence.Entity;
+import io.micronaut.data.annotation.Id;
+import io.micronaut.data.annotation.GeneratedValue;
+import io.micronaut.data.annotation.MappedEntity;
+import jakarta.validation.constraints.NotBlank;
+import io.micronaut.data.annotation.TypeDef;
+import io.micronaut.data.model.DataType;
 
-@Entity
+@MappedEntity
+@Introspected
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long idUsuario;
 
+    @NotBlank
     private String login;
 
+    @NotBlank
     private String senha;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "cargo", nullable = false)
+    @TypeDef(type = DataType.STRING) // Persistir o enum como String no banco
     private Cargo cargo;
-    
-    public Cargo getCargo() {
-        return cargo;
-    }
 
-    public void setCargo(Cargo cargo) {
-        this.cargo = cargo;
-    }
+    // Getters e Setters
 
     public Long getIdUsuario() {
         return idUsuario;
@@ -37,6 +38,7 @@ public class Usuario {
     public String getLogin() {
         return login;
     }
+
     public void setLogin(String login) {
         this.login = login;
     }
@@ -47,5 +49,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
     }
 }

@@ -1,13 +1,17 @@
 package com.example.model;
 
 import io.micronaut.core.annotation.Introspected;
-import jakarta.persistence.Entity;
+import io.micronaut.data.annotation.Id;
+import io.micronaut.data.annotation.GeneratedValue;
+import io.micronaut.data.annotation.MappedEntity;
+import jakarta.validation.constraints.NotBlank;
 
-@Entity
+@MappedEntity
+@Introspected
 public class Autor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long idAutor;
 
     @NotBlank(message = "O nome é obrigatório.")
@@ -16,24 +20,26 @@ public class Autor {
     @NotBlank(message = "A nacionalidade é obrigatória.")
     private String nacionalidade;
 
+    // Getters e Setters
+
     public Long getIdAutor() {
         return idAutor;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getNacionalidade() {
-        return nacionalidade;
     }
 
     public void setIdAutor(Long idAutor) {
         this.idAutor = idAutor;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
     }
 
     public void setNacionalidade(String nacionalidade) {
