@@ -15,21 +15,15 @@ services:
       - mysql_data:/var/lib/mysql
     networks:
       - app-network
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 3s
-      timeout: 2s
-      retries: 10
 
   app:
     build: .
     container_name: micronaut-app
-    restart: always
+    restart: on-failure
     ports:
       - "8080:8080"
     depends_on:
-        mysql:
-          condition: service_healthy
+      - mysql
     environment:
       DB_HOST: mysql-db
       DB_PORT: 3306
