@@ -8,4 +8,5 @@ import io.micronaut.data.jpa.repository.JpaRepository;
 @Repository
 public interface EmprestimoRepository extends JpaRepository<Emprestimo, Long>{
     
+    
 }
