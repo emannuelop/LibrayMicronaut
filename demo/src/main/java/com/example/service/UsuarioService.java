@@ -21,6 +21,11 @@ public class UsuarioService {
 
     // Criar novo usuário
     public Usuario salvarUsuario(UsuarioDTO usuario) {
+
+        if(!usuarioRepository.findByLogin(usuario.login()).isEmpty()){
+            throw new RuntimeException("Usuario com login existente: " + usuario.login());
+        }
+
         Usuario usuarioNovo = new Usuario();
         usuarioNovo.setLogin(usuario.login());
         usuarioNovo.setSenha(usuario.senha());

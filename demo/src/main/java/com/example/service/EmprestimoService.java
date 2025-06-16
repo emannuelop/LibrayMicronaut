@@ -3,7 +3,6 @@ package com.example.service;
 import java.util.List;
 
 import com.example.dto.EmprestimoDTO;
-import com.example.model.Autor;
 import com.example.model.Emprestimo;
 import com.example.model.Livro;
 import com.example.model.Usuario;

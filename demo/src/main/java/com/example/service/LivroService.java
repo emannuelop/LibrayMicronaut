@@ -24,6 +24,10 @@ public class LivroService {
 
     // Criar novo livro
     public Livro salvarLivro(LivroDTO livro) {
+        if(!livroRepository.findByIsbn(livro.isbn()).isEmpty()){
+            throw new RuntimeException("Livro com isbn existente: " + livro.isbn());
+        }
+
         Autor autor = autorRepository.findById(livro.idAutor())
                 .orElseThrow(() -> new RuntimeException("Autor não encontrado com ID: " + livro.idAutor()));
 

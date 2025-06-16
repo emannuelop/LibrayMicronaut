@@ -20,6 +20,10 @@ public class AutorService {
 
     // Criar novo autor
     public Autor salvarAutor(AutorDTO autor) {
+        if(!autorRepository.findByNome(autor.nome()).isEmpty()){
+            throw new RuntimeException("Autor com nome existente: " + autor.nome());
+        }
+
         Autor autorNovo = new Autor();
         autorNovo.setNome(autor.nome());
         autorNovo.setNacionalidade(autor.nacionalidade());
