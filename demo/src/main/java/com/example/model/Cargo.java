@@ -1,8 +1,8 @@
 package com.example.model;
 
-import io.micronaut.core.annotation.Introspected;
+import io.micronaut.serde.annotation.Serdeable;
 
-@Introspected // serialização/deserialização no Micronaut
+@Serdeable // serialização/deserialização no Micronaut
 public enum Cargo {
     ADMIN(1, "Administrador"),
     FUNCIONARIO(2, "Funcionário"),

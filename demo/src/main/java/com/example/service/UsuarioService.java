@@ -59,7 +59,7 @@ public class UsuarioService {
             throw new RuntimeException("Cargo inválido: " + usuarioAtualizado.idCargo());
         }
 
-        return usuarioRepository.save(usuario);
+        return usuarioRepository.update(usuario);
     }
 
     // Deletar usuário

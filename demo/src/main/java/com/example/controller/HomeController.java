@@ -12,7 +12,7 @@ public class HomeController {
 
     @Get
     public HttpResponse<?> redirectToSwagger() {
-        URI swaggerUri = UriBuilder.of("/swagger-ui.html").build();
+        URI swaggerUri = UriBuilder.of("/swagger-ui").build();
         return HttpResponse.redirect(swaggerUri);
     }
 }

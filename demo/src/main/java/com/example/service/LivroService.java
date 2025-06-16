@@ -59,7 +59,7 @@ public class LivroService {
         livro.setIsbn(livroAtualizado.isbn());
         livro.setTitulo(livroAtualizado.titulo());
 
-        return livroRepository.save(livro);
+        return livroRepository.update(livro);
     }
 
     // Deletar livro

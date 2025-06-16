@@ -1,17 +1,20 @@
 package com.example.model;
 
 import io.micronaut.core.annotation.Introspected;
-import io.micronaut.data.annotation.Id;
-import io.micronaut.data.annotation.GeneratedValue;
-import io.micronaut.data.annotation.MappedEntity;
+
+import io.micronaut.serde.annotation.Serdeable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
-@MappedEntity
-@Introspected
+@Entity
+@Serdeable
 public class Autor {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAutor;
 
     @NotBlank(message = "O nome é obrigatório.")

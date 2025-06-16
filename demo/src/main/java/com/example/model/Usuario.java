@@ -1,19 +1,20 @@
 package com.example.model;
 
-import io.micronaut.core.annotation.Introspected;
-import io.micronaut.data.annotation.Id;
-import io.micronaut.data.annotation.GeneratedValue;
-import io.micronaut.data.annotation.MappedEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import io.micronaut.data.annotation.TypeDef;
 import io.micronaut.data.model.DataType;
+import io.micronaut.serde.annotation.Serdeable;
 
-@MappedEntity
-@Introspected
+@Entity
+@Serdeable
 public class Usuario {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
 
     @NotBlank

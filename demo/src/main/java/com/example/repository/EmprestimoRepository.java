@@ -1,9 +1,11 @@
 package com.example.repository;
 
-import com.example.model.Autor;
+import com.example.model.Emprestimo;
+
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.jpa.repository.JpaRepository;
 
 @Repository
-public interface AutorRepository extends JpaRepository<Autor, Long> {
+public interface EmprestimoRepository extends JpaRepository<Emprestimo, Long>{
+    
 }

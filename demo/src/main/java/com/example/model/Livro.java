@@ -1,24 +1,28 @@
 package com.example.model;
 
-import io.micronaut.core.annotation.Introspected;
-import io.micronaut.data.annotation.Id;
-import io.micronaut.data.annotation.GeneratedValue;
-import io.micronaut.data.annotation.MappedEntity;
-import io.micronaut.data.annotation.Relation;
+import io.micronaut.serde.annotation.Serdeable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
 
-@MappedEntity
-@Introspected
+@Entity
+@Serdeable
 public class Livro {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idLivro;
 
     @NotBlank(message = "O título é obrigatório.")
     private String titulo;
 
-    @Relation(Relation.Kind.MANY_TO_ONE)
+    @ManyToOne
+    @JoinColumn(name = "autor_id")
     private Autor autor;
 
     @NotBlank(message = "O ISBN é obrigatório.")

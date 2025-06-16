@@ -44,7 +44,7 @@ public class AutorService {
 
         autor.setNome(autorAtualizado.nome());
         autor.setNacionalidade(autorAtualizado.nacionalidade());
-        return autorRepository.save(autor);
+        return autorRepository.update(autor);
     }
 
     // Deletar autor por ID
